@@ -13,6 +13,7 @@ const Game = () => {
   return (
     <div className="app-container">
       <div className="left-panel">
+        <span>Home</span>
         <button onClick={onHomePoint}>+</button>
       </div>
       <div className="middle-panel">
@@ -21,6 +22,7 @@ const Game = () => {
         <span>{visitScore}</span>
       </div>
       <div className="right-panel">
+        <span>Visitors</span>
         <button onClick={onVisitPoint}>+</button>
       </div>
     </div>
