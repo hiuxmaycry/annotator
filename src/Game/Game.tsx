@@ -3,8 +3,10 @@ import { useState } from 'react';
 const Game = () => {
   const [ homeScore, setHomeScore ] = useState(0);
   const [ visitScore, setVisitScore ] = useState(0);
-  const onHomePoint = () => { setHomeScore(homeScore + 1) };
-  const onVisitPoint = () => { setVisitScore(visitScore + 1) };
+  const onHomeIncreasePoint = () => { setHomeScore(homeScore + 1) };
+  const onVisitIncreasePoint = () => { setVisitScore(visitScore + 1) };
+  const onHomeDecreasePoint = () => { setHomeScore(homeScore? homeScore - 1: 0) };
+  const onVisitDecreasePoint = () => { setVisitScore(visitScore? visitScore - 1: 0) };
   const onResetPoints = () => {
     setHomeScore(0);
     setVisitScore(0);
@@ -14,7 +16,8 @@ const Game = () => {
     <div className="app-container">
       <div className="left-panel">
         <span>Home</span>
-        <button onClick={onHomePoint}>+</button>
+        <button onClick={onHomeIncreasePoint}>+</button>
+        <button onClick={onHomeDecreasePoint}>-</button>
       </div>
       <div className="middle-panel">
         <button onClick={onResetPoints}>reset</button>
@@ -23,7 +26,8 @@ const Game = () => {
       </div>
       <div className="right-panel">
         <span>Visitors</span>
-        <button onClick={onVisitPoint}>+</button>
+        <button onClick={onVisitIncreasePoint}>+</button>
+        <button onClick={onVisitDecreasePoint}>-</button>
       </div>
     </div>
   );
