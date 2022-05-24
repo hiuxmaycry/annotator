@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import './Game.css';
+
+
 
 const Game = () => {
   const [ homeScore, setHomeScore ] = useState(0);
@@ -22,19 +25,47 @@ const Game = () => {
 
   return (
     <div className="app-container">
-      <div className="left-panel">
-        <span>Home</span>
-        <button onClick={onHomeIncreasePoint}>+</button>
-        <button onClick={onHomeDecreasePoint}>-</button>
-      </div>
-      <div className="middle-panel">
-        <button onClick={onResetPoints}>reset</button>
-        <span>{homeScore}-{visitScore}</span>
-      </div>
-      <div className="right-panel">
-        <span>Visitors</span>
-        <button onClick={onVisitIncreasePoint}>+</button>
-        <button onClick={onVisitDecreasePoint}>-</button>
+      <div className="board">
+        <div className="title-principal">
+          <span>EL TABLERO DEL INGENIERO</span>
+        </div>
+        <div className="score-board">
+          <div className="left-panel">
+              <span className="title-home-visitors">HOME</span>
+              <div className="board-points">
+                <span>{homeScore}</span>
+              </div>
+              <div className='more-less'>
+                <button className="button-minus" onClick={onHomeDecreasePoint}>-</button>
+                <button className="button-plus" onClick={onHomeIncreasePoint}>+</button>
+              </div>
+            </div>
+            <div className="middle-panel">
+              <div className="board-points">
+                11:21
+              </div>
+              <div>
+                <span>PERIOD</span>
+                <div className="board-points">
+                  2
+                </div>
+              </div>
+              <div>
+                <button className="btn-reset" onClick={onResetPoints}>RESET</button>
+              </div>
+            </div>
+            <div className="right-panel">
+              <span className="title-home-visitors">VISITORS</span>
+              <div className="board-points">
+                <span>{visitScore}</span>
+              </div>
+              <div className="more-less">
+                <button className="button-minus" onClick={onVisitDecreasePoint}>-</button>
+                <button className="button-plus" onClick={onVisitIncreasePoint}>+</button>
+              </div>
+            </div>
+        </div>
+        
       </div>
     </div>
   );
