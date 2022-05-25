@@ -1,8 +1,6 @@
-import Game from '../src/Game';
+import Game from './Game';
 import './App.css';
 
-const App = () => {
-  return <Game />;
-}
+const App = () => <Game />;
 
 export default App;
