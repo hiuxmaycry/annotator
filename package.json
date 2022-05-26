@@ -26,7 +26,7 @@
     "lint": "eslint",
     "lint:fix": "eslint src --fix",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "eslint",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
