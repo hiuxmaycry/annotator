@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - 16
+
+script:
+  - npm test
+
+notifications:
+  email:
+    on_failure: hiuxmaycry@gmail.com
+
+cache:
+  directories:
+    - node_modules
