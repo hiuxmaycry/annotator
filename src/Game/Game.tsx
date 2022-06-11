@@ -29,8 +29,8 @@ const Game = () => {
         </div>
         <div className="score-board">
           <div className="left-panel">
-            <span className="home-visitors-title">HOME</span>
-            <div className="board-points">
+            <span className="point-board-title">HOME</span>
+            <div className="point-board">
               <span>{homeScore}</span>
             </div>
             <div className="more-less-panel">
@@ -39,12 +39,12 @@ const Game = () => {
             </div>
           </div>
           <div className="middle-panel">
-            <div className="board-points">
+            <div className="point-board">
               11:21
             </div>
             <div>
-              <span>PERIOD</span>
-              <div className="board-points">
+              <span className="point-board-title">PERIOD</span>
+              <div className="point-board">
                 2
               </div>
             </div>
@@ -53,8 +53,8 @@ const Game = () => {
             </div>
           </div>
           <div className="right-panel">
-            <span className="home-visitors-title">VISITORS</span>
-            <div className="board-points">
+            <span className="point-board-title">VISITORS</span>
+            <div className="point-board">
               <span>{visitScore}</span>
             </div>
             <div className="more-less-panel">

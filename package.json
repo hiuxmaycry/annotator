@@ -26,7 +26,8 @@
     "lint": "eslint",
     "lint:fix": "eslint src --fix",
     "build": "react-scripts build",
-    "test": "eslint",
+    "check-types": "tsc --noEmit",
+    "test": "npm run lint && npm run check-types",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
