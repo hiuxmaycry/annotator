@@ -24,10 +24,11 @@
   "scripts": {
     "start": "react-scripts start",
     "lint": "eslint",
+    "unit": "CI=true react-scripts test",
     "lint:fix": "eslint src --fix",
     "build": "react-scripts build",
     "check-types": "tsc --noEmit",
-    "test": "npm run lint && npm run check-types",
+    "test": "npm run lint && npm run check-types && npm run unit",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
