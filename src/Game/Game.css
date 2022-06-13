@@ -26,13 +26,13 @@
   margin-top: 20px;
 }
 
-.point-board-title {
+.score-board-title {
   color: #333;
   font-size: 30px;
   font-weight: bold;
 }
 
-.score-board {
+.board-container {
   height: 90%;
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@
   flex-grow: 1;
 }
 
-.point-board {
+.score-board {
   display: flex;
   align-items: center;
   min-width: 80px;
