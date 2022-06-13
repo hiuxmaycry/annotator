@@ -31,7 +31,7 @@
     "unit": "CI=true react-scripts test",
     "build": "react-scripts build",
     "check-types": "tsc --noEmit",
-    "test": "npm run lint && npm run check-types && npm run unit",
+    "test": "npm run lint && npm run format && npm run check-types && npm run unit",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -57,6 +57,7 @@
     "@typescript-eslint/parser": "5.26.0",
     "eslint": "8.16.0",
     "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.30.0",

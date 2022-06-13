@@ -21,9 +21,7 @@ const useScore = (): [
     setScore(0);
   };
 
-  return [
-    score, increaseScore, decreaseScore, resetScore
-  ];
+  return [score, increaseScore, decreaseScore, resetScore];
 };
 
 export default useScore;

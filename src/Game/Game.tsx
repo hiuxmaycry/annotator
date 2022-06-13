@@ -3,8 +3,14 @@ import Score from './Score';
 import useScore from './useScore';
 
 const Game = () => {
-  const [homeScore, onHomeIncreaseScore, onHomeDecreaseScore, homeResetScore] = useScore();
-  const [visitScore, onVisitIncreaseScore, onVisitDecreaseScore, visitResetScore] = useScore();
+  const [homeScore, onHomeIncreaseScore, onHomeDecreaseScore, homeResetScore] =
+    useScore();
+  const [
+    visitScore,
+    onVisitIncreaseScore,
+    onVisitDecreaseScore,
+    visitResetScore
+  ] = useScore();
   const onResetScores = () => {
     homeResetScore();
     visitResetScore();
