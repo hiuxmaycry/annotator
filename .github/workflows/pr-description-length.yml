@@ -1,8 +1,11 @@
 name: PR Description check
 on:
   pull_request:
-    types: [edited, created]
-  push:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
 jobs:
   PR-description-check:
     runs-on: ubuntu-latest
