@@ -1,7 +1,7 @@
 name: PR Description check
-on: [push]
+on: [push, description]
 jobs:
-  test-app:
+  PR-description-check:
     runs-on: ubuntu-latest
     steps:
       - name: Enforce Pull Request Description Length
