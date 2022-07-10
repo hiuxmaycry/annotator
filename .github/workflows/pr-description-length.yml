@@ -1,5 +1,8 @@
 name: PR Description check
-on: [push, description]
+on:
+  pull_request:
+    types: [edited, created]
+  push:
 jobs:
   PR-description-check:
     runs-on: ubuntu-latest
