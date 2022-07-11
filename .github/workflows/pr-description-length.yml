@@ -1,0 +1,16 @@
+name: PR Description check
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+jobs:
+  PR-description-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce Pull Request Description Length
+        uses: ryanvade/enforce-pr-description-length-action@v1
+        with:
+          minLength: 4
